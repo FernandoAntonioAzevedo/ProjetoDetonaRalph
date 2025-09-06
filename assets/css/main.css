@@ -67,7 +67,7 @@ h2 {
 
 .menu-ranking ol {
     list-style: none;
-    padding: 0;
+    padding: 1;
     margin-top: 0.2rem;
 }
 
@@ -90,9 +90,9 @@ h2 {
 
 .menu-ranking ol {
     list-style: none;
-    padding: 0;
-    margin: 0;
-    font-size: 12px;
+    padding: 1;
+    margin: 1;
+    font-size: 0.8rem;
     color: #ffffff;
 }
 
