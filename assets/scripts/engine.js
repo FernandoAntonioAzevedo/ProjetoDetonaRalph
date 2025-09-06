@@ -156,7 +156,7 @@ function resetGame() {
   clearAllIntervals();
   // (opcional) reiniciar valores
   state.values.result = 0;
-  state.values.currentTime = 60;
+  state.values.currentTime = 30;
   state.values.lives = 5;
   updateScore();
   updateLives();
