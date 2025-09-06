@@ -1,5 +1,5 @@
 h2 {
-    color: red;
+    color: #ff0000;
 }
 
 .valor {
@@ -14,14 +14,15 @@ h2 {
 }
 
 .menu {
-    display: flex;
-    justify-content: space-evenly;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* 4 colunas iguais */
     align-items: center;
     height: 90px;
     width: 100%;
     background-color: #000000;
     color: #ffffff;
     border-bottom: 5px solid #ffd700;
+    text-align: center; /* centraliza conteúdo */
 }
 
 .panel {
@@ -57,4 +58,126 @@ h2 {
 .menu-time h2:nth-child(2),
 .menu-score h2:nth-child(2){
     margin-top: 1rem;
+}
+
+.menu-ranking {
+    color: white;
+    text-align: center;
+}
+
+.menu-ranking ol {
+    list-style: none;
+    padding: 0;
+    margin-top: 0.2rem;
+}
+
+.menu-ranking {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu-ranking h2 {
+    margin-bottom: 0.5rem;
+    font-size: 1rem;
+    color: #ffd700;
+}
+
+.menu-ranking h2:hover {
+    color: #ff0000;
+}
+
+.menu-ranking ol {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    font-size: 12px;
+    color: #ffffff;
+}
+
+/*  Responsividade */
+
+@media (max-width: 1024px) {
+    .square {
+        height: 120px;
+        width: 120px;
+    }
+
+    .menu {
+        /* Tempo | Pontuação em cima / Vidas | Ranking embaixo */
+        grid-template-columns: repeat(2, 1fr); 
+        height: auto;
+        padding: 1rem 0;
+    }
+}
+
+@media (max-width: 768px) {
+    .square {
+        height: 100px;
+        width: 100px;
+    }
+
+    .menu {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem;
+        font-size: 14px;
+    }
+
+    .menu-lives img {
+        height: 40px;
+    }
+
+    .menu-ranking h2 {
+        font-size: 12px;
+    }
+
+    .menu-ranking ol {
+        font-size: 11px;
+    }
+}
+
+@media (max-width: 576px) {
+    .square {
+        height: 80px;
+        width: 80px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .menu > div {
+        margin-bottom: 0.8rem;
+    }
+
+    .menu-lives img {
+        height: 35px;
+    }
+}
+
+
+@media (max-width: 356px) {
+    .square {
+        height: 70px;
+        width: 70px;
+    }
+
+    .menu {
+        grid-template-columns: 1fr;
+        font-size: 12px;
+    }
+
+    .menu-lives img {
+        height: 30px;
+    }
+
+    .menu-ranking h2 {
+        font-size: 11px;
+    }
+
+    .menu-ranking ol {
+        font-size: 10px;
+    }
 }
